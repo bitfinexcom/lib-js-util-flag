@@ -6,7 +6,8 @@ const FLAGS = {
     'IS_POST_ONLY': 4096,
     'IS_OCO': 16384,
     'AVOID_FUNDING_VIR': 524288,
-    'MOD_TIF_0': 8589934592
+    'MOD_TIF_0': 8589934592,
+    'EXP_0': 68719476736
   },
   OFFER: {
     'IS_HIDDEN': 64
