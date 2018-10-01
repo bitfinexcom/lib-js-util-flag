@@ -11,6 +11,9 @@ const FLAGS = {
   },
   OFFER: {
     'IS_HIDDEN': 64
+  },
+  ENTRY_TRG_REASON: {
+    'R_UPD_FX': 1048576
   }
 }
 
