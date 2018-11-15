@@ -21,7 +21,25 @@ function has_flag (t, f, c) {
   return ((f & FLAGS[t][c]) === FLAGS[t][c])
 }
 
+function add_flag (t, f, c) {
+  if (has_flag(t, f, c)) {
+    return f
+  }
+
+  return f + FLAGS[t][c]
+}
+
+function del_flag (t, f, c) {
+  if (!has_flag(t, f, c)) {
+    return f
+  }
+
+  return f - FLAGS[t][c]
+}
+
 module.exports = {
   FLAGS: FLAGS,
-  has_flag: has_flag
+  has_flag: has_flag,
+  add_flag: add_flag,
+  del_flag: del_flag
 }
