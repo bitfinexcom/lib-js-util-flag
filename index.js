@@ -38,8 +38,8 @@ function del_flag (t, f, c) {
 }
 
 module.exports = {
-  FLAGS: FLAGS,
-  has_flag: has_flag,
-  add_flag: add_flag,
-  del_flag: del_flag
+  FLAGS,
+  has_flag,
+  add_flag,
+  del_flag
 }
