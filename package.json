@@ -6,11 +6,21 @@
   "keywords": [
     "bitfinex"
   ],
-  "dependencies": {
+  "scripts": {
+    "test": "npm run lint && npm run test:code",
+    "test:code": "NODE_ENV=test mocha ./test",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
     "mocha-it-each": "^1.0.2",
-    "chance": "^1.1.11"
+    "chance": "^1.1.11",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint": "^8.44.0",
+    "standard": "^17.0.0"
   },
   "engine": {
     "node": ">=6.0"

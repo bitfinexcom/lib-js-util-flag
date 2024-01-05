@@ -5,18 +5,20 @@
 const libFlag = require('../index')
 const assert = require('assert')
 const { itEach } = require('mocha-it-each')
-const {Chance} = require('chance')
+const { Chance } = require('chance')
 const { FLAGS } = require('../index')
 
 const chance = new Chance()
 
 describe('relay.lib.common tests', () => {
   let flag
-  beforeEach(()=>{
-    flag = chance.natural({min: 0, max: 2**31})
+
+  beforeEach(() => {
+    flag = chance.natural({ min: 0, max: 2 ** 31 })
   })
+
   describe('orders', () => {
-    let orderParams = Object.entries(FLAGS.ORDER)
+    const orderParams = Object.entries(FLAGS.ORDER)
     itEach('should add flag correctly for orders ${value[0]}', orderParams, async ([key, val]) => {
       flag = libFlag.add_flag('ORDER', flag, key)
       assert.strictEqual(flag & FLAGS.ORDER[key], val)
@@ -38,7 +40,7 @@ describe('relay.lib.common tests', () => {
   })
 
   describe('offers', () => {
-    let offerParams = Object.entries(FLAGS.OFFER)
+    const offerParams = Object.entries(FLAGS.OFFER)
     itEach('should add flag correctly for orders ${value[0]}', offerParams, async ([key, val]) => {
       flag = libFlag.add_flag('OFFER', flag, key)
       assert.strictEqual(flag & FLAGS.OFFER[key], val)
@@ -60,7 +62,7 @@ describe('relay.lib.common tests', () => {
   })
 
   describe('entry_trg_reason', () => {
-    let trgPrams = Object.entries(FLAGS.ENTRY_TRG_REASON)
+    const trgPrams = Object.entries(FLAGS.ENTRY_TRG_REASON)
     itEach('should add flag correctly for orders ${value[0]}', trgPrams, async ([key, val]) => {
       flag = libFlag.add_flag('ENTRY_TRG_REASON', flag, key)
       assert.strictEqual(flag & FLAGS.ENTRY_TRG_REASON[key], val)
