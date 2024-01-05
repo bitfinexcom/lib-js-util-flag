@@ -14,6 +14,23 @@ const FLAGS = {
   },
   ENTRY_TRG_REASON: {
     R_UPD_FX: 1048576
+  },
+  RELAY: {
+    DEC_S: 2 ** 3,
+    TIME_S: 2 ** 5,
+    FMT_X: 2 ** 9,
+    FMT_INTERNAL0: 2 ** 10,
+    TS_ALL: 2 ** 15,
+    SEQ_ALL: 2 ** 16,
+    CHECKSUM: 2 ** 17,
+    EXP: 2 ** 18,
+    DEBUG: 2 ** 19,
+    C_DEBUG: 2 ** 20,
+    DP_TRAVEL_RULE: 2 ** 21,
+    DP_BFXPAY: 2 ** 22,
+    APP_OFFICIAL: 2 ** 25,
+    APP_MOBILE_OFFICIAL: 2 ** 26,
+    VNEXT_0: 2 ** 29
   }
 }
 

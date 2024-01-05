@@ -82,4 +82,26 @@ describe('relay.lib.common tests', () => {
         assert.ok(!libFlag.has_flag('ENTRY_TRG_REASON', flag, key))
       })
   })
+
+  describe('relay', () => {
+    const relayParams = Object.entries(FLAGS.RELAY)
+    itEach('should add flag correctly for orders ${value[0]}', relayParams, async ([key, val]) => {
+      flag = libFlag.add_flag('RELAY', flag, key)
+      assert.strictEqual(flag & FLAGS.RELAY[key], val)
+    })
+
+    itEach('should remove flag correctly for orders ${value[0]}', relayParams, async ([key, val]) => {
+      flag = libFlag.del_flag('RELAY', libFlag.add_flag('RELAY', flag, key), key)
+      assert.strictEqual(flag & val, 0)
+    })
+
+    itEach('has_flag should correctly true/false for ${value[0]} when present/absent',
+      relayParams, async ([key, val]) => {
+        flag = libFlag.add_flag('RELAY', flag, key)
+        assert.ok(libFlag.has_flag('RELAY', flag, key))
+
+        flag = libFlag.del_flag('RELAY', flag, key)
+        assert.ok(!libFlag.has_flag('RELAY', flag, key))
+      })
+  })
 })
