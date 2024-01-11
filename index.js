@@ -1,3 +1,5 @@
+'use strict'
+
 const FLAGS = {
   ORDER: {
     IS_HIDDEN: 64,
