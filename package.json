@@ -1,6 +1,6 @@
 {
   "name": "@bitfinex/lib-js-util-flag",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Bitfinex Lib Utility for Flags",
   "author": "prdn <paolo@bitfinex.com> (https://bitfinex.com/)",
   "keywords": [
@@ -23,8 +23,8 @@
     "eslint": "^8.44.0",
     "standard": "^17.0.0"
   },
-  "engine": {
-    "node": ">=6.0"
+  "engines": {
+    "node": ">=16.0"
   },
   "license": "Apache-2.0",
   "repository": {

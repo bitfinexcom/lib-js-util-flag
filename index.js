@@ -29,7 +29,7 @@ const FLAGS = {
     DEBUG: 2 ** 19,
     C_DEBUG: 2 ** 20,
     DP_TRAVEL_RULE: 2 ** 21,
-    DP_BFXPAY: 2 ** 22,
+    // DP_BFXPAY: 2 ** 22,
     APP_OFFICIAL: 2 ** 25,
     APP_MOBILE_OFFICIAL: 2 ** 26,
     VNEXT_0: 2 ** 29
