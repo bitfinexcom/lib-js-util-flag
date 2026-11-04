@@ -36,21 +36,21 @@ const FLAGS = {
   }
 }
 
-function has_flag (t, f, c) {
+function hasFlag (t, f, c) {
   return (f & FLAGS[t][c]) === FLAGS[t][c]
 }
 
-function add_flag (t, f, c) {
+function addFlag (t, f, c) {
   return f | FLAGS[t][c]
 }
 
-function del_flag (t, f, c) {
+function delFlag (t, f, c) {
   return f & ~FLAGS[t][c]
 }
 
 module.exports = {
   FLAGS,
-  has_flag,
-  add_flag,
-  del_flag
+  has_flag: hasFlag,
+  add_flag: addFlag,
+  del_flag: delFlag
 }
